@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas Sueltas - Historias</title>
+  <meta name="description" content="Relatos y análisis profundos de los videoclips que definieron épocas y corrientes.">
+  <!-- Estilos globales compartidos (variables, navbar, player, etc.) -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Estilos exclusivos de la página Historias -->
+  <link rel="stylesheet" href="css/historias.css">
+</head>
+<body>
+
+  <div class="page-outer-container">
+    
+    <!-- Header / Navbar -->
+    <header>
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
+          Notas Sueltas
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="explorar.html">Explorar</a></li>
+            <li class="active"><a href="historias.html">Historias</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="biblioteca.html">Mi Biblioteca</a></li>
+          </ul>
+        </nav>
+        <a href="biblioteca.html" class="user-profile">
+          <span>Usuario: Ana</span>
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Ana" class="user-avatar">
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Area -->
+    <section class="hero-section">
+      <div class="hero-subtitle">Narrativas visuales</div>
+      <h1 class="hero-title">HISTORIAS DETRÁS DE LA MÚSICA</h1>
+      <p class="hero-desc">Explora análisis en profundidad, notas críticas y relatos sobre la producción, dirección y el simbolismo detrás de los videoclips icónicos.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      
+      <!-- Search & Filters -->
+      <div class="search-filter-row">
+        <div class="search-input-wrap">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+          <input type="text" placeholder="Buscar historias por artista, director o canción..." class="search-input">
+        </div>
+        <select class="search-filter-select">
+          <option value="all">Todas las épocas</option>
+          <option value="60s">Años 60</option>
+          <option value="70s">Años 70</option>
+          <option value="80s">Años 80</option>
+          <option value="90s">Años 90</option>
+          <option value="00s">Años 2000</option>
+        </select>
+        <select class="search-filter-select">
+          <option value="all">Todos los géneros</option>
+          <option value="rock">Rock</option>
+          <option value="pop">Pop</option>
+          <option value="jazz">Jazz</option>
+          <option value="grunge">Grunge</option>
+        </select>
+      </div>
+
+      <!-- Stories Grid -->
+      <div class="stories-grid">
+        <!-- Story Card 1 -->
+        <div class="story-card">
+          <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&auto=format&fit=crop&q=80" class="story-card-img" alt="Queen">
+          <div class="story-card-body">
+            <div class="story-card-meta">
+              <span>Años 70</span>
+              <span>•</span>
+              <span>Rock Sinfónico</span>
+            </div>
+            <h3 class="story-card-title">La Revolución de Queen: Bohemian Rhapsody y el vídeo que lo cambió todo</h3>
+            <p class="story-card-excerpt">Exploramos cómo una banda británica desafió las limitaciones técnicas de 1975 utilizando prismas y mezcla analógica para crear la pieza promocional más influyente de la historia.</p>
+            <div class="story-card-footer">
+              <a href="#" class="story-card-readmore">Leer Relato →</a>
+              <span class="playlist-desc">6 min lectura</span>
+            </div>
+          </div>
+        </div>
+        <!-- Story Card 2 -->
+        <div class="story-card">
+          <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&auto=format&fit=crop&q=80" class="story-card-img" alt="Thriller">
+          <div class="story-card-body">
+            <div class="story-card-meta">
+              <span>Años 80</span>
+              <span>•</span>
+              <span>Pop / Terror</span>
+            </div>
+            <h3 class="story-card-title">Thriller y el nacimiento del cortometraje musical</h3>
+            <p class="story-card-excerpt">El making-of del vídeo musical de 13 minutos de Michael Jackson. Una producción que fusionó el cine de terror hollywoodiense con la coreografía urbana y el marketing.</p>
+            <div class="story-card-footer">
+              <a href="#" class="story-card-readmore">Leer Relato →</a>
+              <span class="playlist-desc">9 min lectura</span>
+            </div>
+          </div>
+        </div>
+        <!-- Story Card 3 -->
+        <div class="story-card">
+          <img src="https://images.unsplash.com/photo-1524567214243-982894458528?w=400&auto=format&fit=crop&q=80" class="story-card-img" alt="Nirvana">
+          <div class="story-card-body">
+            <div class="story-card-meta">
+              <span>Años 90</span>
+              <span>•</span>
+              <span>Grunge / Alternativo</span>
+            </div>
+            <h3 class="story-card-title">Smells Like Teen Spirit: La estética grunge en el lente rebelde</h3>
+            <p class="story-card-excerpt">Un gimnasio escolar destruido y una neblina densa. Analizamos la composición artística de Samuel Bayer que capturó el nihilismo de toda una generación.</p>
+            <div class="story-card-footer">
+              <a href="#" class="story-card-readmore">Leer Relato →</a>
+              <span class="playlist-desc">5 min lectura</span>
+            </div>
+          </div>
+        </div>
+        <!-- Story Card 4 -->
+        <div class="story-card">
+          <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&auto=format&fit=crop&q=80" class="story-card-img" alt="Radiohead">
+          <div class="story-card-body">
+            <div class="story-card-meta">
+              <span>Años 90</span>
+              <span>•</span>
+              <span>Indie Rock / Conceptual</span>
+            </div>
+            <h3 class="story-card-title">Michel Gondry y David Fincher: Los reyes de los 90 y el conceptualismo</h3>
+            <p class="story-card-excerpt">Cómo la transición al cine de grandes directores se gestó en los platós de videoclips de artistas como Radiohead, Madonna y George Michael.</p>
+            <div class="story-card-footer">
+              <a href="#" class="story-card-readmore">Leer Relato →</a>
+              <span class="playlist-desc">8 min lectura</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-logo">Notas Sueltas</div>
+        <div class="footer-links">
+          <div class="footer-links-col">
+            <a href="index.html">Inicio</a>
+            <a href="explorar.html">Explorar</a>
+          </div>
+          <div class="footer-links-col">
+            <a href="comunidad.html">Comunidad</a>
+            <a href="biblioteca.html">Biblioteca</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Notas Sueltas.</div>
+      </div>
+    </footer>
+
+    <!-- Floating Audio Player -->
+    <div class="audio-player-bar">
+      <div class="player-inner">
+        <div class="player-controls">
+          <button class="player-btn player-btn-prev" aria-label="Anterior">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6L18 18V6z"/></svg>
+          </button>
+          <button class="player-btn player-btn-play" aria-label="Reproducir/Pausar">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button class="player-btn player-btn-next" aria-label="Siguiente">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6z"/></svg>
+          </button>
+        </div>
+        <div class="player-track-info">
+          <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=100&auto=format&fit=crop&q=80" alt="Miniatura" class="player-track-thumb">
+          <div class="player-track-meta">
+            <div class="player-track-title">Thriller</div>
+            <div class="player-track-artist">Michael Jackson</div>
+          </div>
+        </div>
+        <div class="player-progress-area">
+          <span class="player-time player-time-current">0:00</span>
+          <div class="player-slider-container">
+            <div class="player-slider-fill"></div>
+            <div class="player-slider-knob"></div>
+          </div>
+          <span class="player-time player-time-duration">13:42</span>
+        </div>
+        <div class="player-visualizer-container">
+          <div class="visualizer-bar" style="height: 4px;"></div>
+          <div class="visualizer-bar" style="height: 6px;"></div>
+          <div class="visualizer-bar" style="height: 14px;"></div>
+          <div class="visualizer-bar" style="height: 24px;"></div>
+          <div class="visualizer-bar" style="height: 18px;"></div>
+          <div class="visualizer-bar" style="height: 10px;"></div>
+          <div class="visualizer-bar" style="height: 5px;"></div>
+          <div class="visualizer-bar" style="height: 3px;"></div>
+        </div>
+        <div class="player-volume-area">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+          </svg>
+          <div class="player-volume-slider">
+            <div class="player-volume-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Reproductor de audio persistente (compartido en todas las páginas) -->
+  <script src="js/player.js"></script>
+  <!-- Lógica exclusiva de la página Historias (búsqueda y filtros) -->
+  <script src="js/historias.js"></script>
+</body>
+</html>

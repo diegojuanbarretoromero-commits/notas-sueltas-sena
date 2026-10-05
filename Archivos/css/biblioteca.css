@@ -1,0 +1,130 @@
+/* ================================================================
+   NOTAS SUELTAS — biblioteca.css
+   Estilos exclusivos de la página MI BIBLIOTECA (biblioteca.html):
+   banner de perfil de usuario, estadísticas, cronología de
+   actividad, logros con barras de progreso y tags de géneros.
+   ================================================================ */
+
+/* ─── BANNER DE PERFIL ───────────────────────────────────────────
+   Tarjeta oscura superior con degradado y borde dorado          */
+.profile-banner {
+  background: linear-gradient(135deg, #1C2025 0%, #121518 100%);
+  color: var(--text-light); border-radius: var(--radius-lg);
+  padding: 32px 24px 24px; margin-bottom: 24px;
+  position: relative; overflow: hidden;
+  box-shadow: var(--shadow-md); border: 1px solid rgba(255,255,255,0.05);
+}
+/* Franja dorada en la parte superior del banner */
+.profile-gold-top {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--accent-gold);
+}
+
+/* ─── CABECERA DEL PERFIL ────────────────────────────────────────
+   Avatar, nombre, handle y bio                                  */
+.profile-main {
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  position: relative; z-index: 2;
+}
+
+/* Envoltorio del avatar con botón de editar */
+.profile-avatar-wrap  { position: relative; margin-bottom: 16px; }
+.profile-avatar       { width: 72px; height: 72px; border-radius: 50%; border: 2px solid var(--accent-gold); object-fit: cover; }
+.profile-avatar-edit  {
+  position: absolute; bottom: 0; right: 0;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: white; border: 1px solid var(--accent-gold);
+  display: flex; justify-content: center; align-items: center;
+  cursor: pointer; color: var(--text-primary);
+}
+
+/* Textos del perfil */
+.profile-name   { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 4px; }
+.profile-handle { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px; }
+.profile-bio    { font-size: 0.75rem; color: #A3A7AF; max-width: 450px; line-height: 1.5; }
+
+/* ─── ESTADÍSTICAS DEL PERFIL ────────────────────────────────────
+   Fila de números: reseñas, seguidores, siguiendo               */
+.profile-stats-row {
+  display: flex; gap: 24px; margin-bottom: 16px;
+}
+.profile-stat-box   { display: flex; flex-direction: column; align-items: center; }
+.profile-stat-val   { font-size: 1.1rem; font-weight: 700; color: var(--text-light); }
+.profile-stat-label { font-size: 0.6rem; text-transform: uppercase; color: #A3A7AF; letter-spacing: 1px; margin-top: 4px; }
+
+/* ─── CRONOLOGÍA DE ACTIVIDAD RECIENTE ───────────────────────────
+   Lista vertical de eventos con línea de tiempo dorada          */
+.activity-timeline {
+  display: flex; flex-direction: column; gap: 16px;
+  position: relative; padding-left: 20px;
+}
+/* Línea vertical de conexión (igual que la de Explorar) */
+.activity-timeline::before {
+  content: '';
+  position: absolute; left: 3px; top: 8px; bottom: 8px;
+  width: 2px; background: var(--accent-gold); opacity: 0.3;
+}
+
+/* Cada evento de actividad */
+.activity-item { position: relative; }
+/* Punto del evento */
+.activity-item::before {
+  content: '';
+  position: absolute; left: -21px; top: 4px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--bg-primary); border: 2px solid var(--accent-teal);
+}
+
+/* Textos del evento */
+.activity-time { font-size: 0.65rem; font-weight: 600; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 4px; }
+.activity-text { font-size: 0.75rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+
+/* Sub-tarjeta dentro del evento (miniatura + detalle) */
+.activity-subcard {
+  background: white; border: 1px solid var(--border-light);
+  border-radius: var(--radius-md); padding: 8px;
+  display: flex; align-items: center; gap: 12px;
+}
+.activity-subcard-img     { width: 48px; height: 36px; border-radius: var(--radius-sm); object-fit: cover; }
+.activity-subcard-details { flex: 1; }
+.activity-subcard-title   { font-size: 0.7rem; font-weight: 700; color: var(--text-primary); }
+.activity-subcard-desc    { font-size: 0.6rem; color: var(--text-muted); }
+
+/* ─── LOGROS Y BARRAS DE PROGRESO ────────────────────────────────
+   Lista de objetivos con indicador de avance animado            */
+.logros-list { display: flex; flex-direction: column; gap: 16px; }
+
+.logro-item { display: flex; flex-direction: column; gap: 6px; }
+
+.logro-header {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.75rem; font-weight: 700;
+}
+.logro-title { display: flex; align-items: center; gap: 6px; }
+
+/* Barra de progreso del logro */
+.logro-bar-container { height: 6px; background: rgba(197,168,128,0.15); border-radius: 3px; overflow: hidden; }
+.logro-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-teal) 100%);
+  border-radius: 3px; width: 0;
+  transition: width 1.2s ease; /* Animación de llenado al cargar */
+}
+
+/* ─── TAGS DE GÉNEROS FAVORITOS ─────────────────────────────────
+   Fila de etiquetas clicables al pie del perfil                 */
+.genre-tags-list { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.genre-tag {
+  background: white; border: 1px solid var(--border-light);
+  padding: 6px 16px; border-radius: 30px;
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; cursor: pointer; transition: all 0.3s ease;
+  display: flex; align-items: center; gap: 6px;
+}
+.genre-tag:hover { background: var(--accent-gold); color: white; border-color: var(--accent-gold); }
+
+/* ─── RED DE INFLUENCIAS SVG ─────────────────────────────────────
+   Grafo de artistas relacionados (usa clases de global.css)     */
+.influences-title { font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: var(--text-muted); margin-bottom: 12px; }

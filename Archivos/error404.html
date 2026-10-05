@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Notas Sueltas</title>
+  <!-- Google Fonts para tipografías similares -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0d1e22;
+      color: #e0e8e8;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* BARRA DE NAVEGACIÓN superior */
+    header {
+      width: 100%;
+      padding: 1.2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(13, 30, 34, 0.9);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e0e8e8;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #a0b2b5;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    nav a.active, nav a:hover {
+      color: #ffffff;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 4px;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: #a0b2b5;
+    }
+
+    .avatar {
+      width: 24px;
+      height: 24px;
+      background-color: #c4a97d;
+      border-radius: 4px;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* NÚMERO 404 CON EFECTO Y DEGRADADO */
+    .error-code-container {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    /* NÚMERO 404 CON EFECTO Y DEGRADADO */
+    .error-code-container {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .error-code {
+      font-family: 'Cinzel', serif;
+      font-size: 13rem;
+      font-weight: 800;
+      line-height: 0.85;
+      letter-spacing: -2px;
+      background: radial-gradient(circle, #2d5058 0%, #162b30 60%, #0d1e22 100%);
+      -webkit-background-clip: text;
+      background-clip: text; /* <--- AGREGA ESTA LÍNEA AQUÍ */
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 25px rgba(120, 180, 200, 0.3);
+      filter: drop-shadow(0 0 15px rgba(135, 206, 235, 0.4));
+      position: relative;
+    }
+
+    .degree-symbol {
+      position: absolute;
+      /* ... resto del código ... */
+      position: relative;
+    }
+
+    .degree-symbol {
+      position: absolute;
+      top: 10px;
+      right: -35px;
+      font-size: 3rem;
+      color: #a0c0cb;
+      text-shadow: 0 0 10px rgba(160, 192, 203, 0.6);
+    }
+
+    /* TÍTULOS Y TEXTO */
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      max-width: 650px;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+
+    p.description {
+      font-size: 0.95rem;
+      color: #a0b2b5;
+      max-width: 520px;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    /* BOTONES */
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.6rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #1a2b2f;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+      background: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .footer-hint {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #63787c;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* CÍRCULOS DECORATIVOS (LENTES / ALTAVOCES DE FONDO) */
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 4px solid rgba(160, 192, 203, 0.25);
+      box-shadow: 0 0 20px rgba(160, 192, 203, 0.15), inset 0 0 20px rgba(160, 192, 203, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .bg-circle::after {
+      content: '';
+      width: 35%;
+      height: 35%;
+      border-radius: 50%;
+      background: rgba(160, 192, 203, 0.3);
+      box-shadow: 0 0 10px rgba(160, 192, 203, 0.4);
+    }
+
+    /* Posicionamiento de círculos */
+    .circle-1 { width: 140px; height: 140px; top: 15%; left: -40px; }
+    .circle-2 { width: 100px; height: 100px; top: 28%; left: 30px; }
+    .circle-3 { width: 90px; height: 90px; top: 18%; right: 10%; }
+    .circle-4 { width: 130px; height: 130px; bottom: 8%; right: 5%; }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header>
+    <div class="brand">
+      <span>♫</span> NOTAS SUELTAS
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">INICIO</a></li>
+        <li><a href="#" class="active">EXPLORAR</a></li>
+        <li><a href="#">HISTORIAS</a></li>
+        <li><a href="#">COMUNIDAD</a></li>
+        <li><a href="#">MI BIBLIOTECA</a></li>
+      </ul>
+    </nav>
+    <div class="user-profile">
+      <span>Usuario Ana</span>
+      <div class="avatar"></div>
+    </div>
+  </header>
+
+  <!-- ELEMENTOS DECORATIVOS DE FONDO -->
+  <div class="bg-circle circle-1"></div>
+  <div class="bg-circle circle-2"></div>
+  <div class="bg-circle circle-3"></div>
+  <div class="bg-circle circle-4"></div>
+
+  <!-- CONTENIDO 404 -->
+  <main>
+    <div class="error-code-container">
+      <div class="error-code">404<span class="degree-symbol">°</span></div>
+    </div>
+
+    <h1>¡UPS! TU VIAJE VISUAL<br>HA TENIDO UN CORTE.</h1>
+    
+    <p class="description">
+      Parece que nos hemos desviado del guion o el enlace se ha perdido en el cosmos de la red.
+    </p>
+
+    <div class="actions">
+      <a href="#" class="btn">
+        <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        VOLVER A LA HISTORIA
+      </a>
+      <a href="#" class="btn">
+        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        IR AL INICIO DE NOTAS SUELTAS
+      </a>
+    </div>
+
+    <div class="footer-hint">
+      SUGERENCIA DE RODAJE:
+    </div>
+  </main>
+
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+// ================================================================
+// NOTAS SUELTAS — fonts/fonts-info.txt (referencia)
+// Las fuentes se cargan desde Google Fonts vía @import en global.css.
+// No se requiere ningún archivo local en esta carpeta.
+//
+// Fuentes utilizadas:
+//   - Outfit         (pesos: 300, 400, 500, 600, 700) → textos del cuerpo
+//   - Playfair Display (pesos: 400, 600, 700; cursiva 400) → títulos y logos
+//
+// URL de carga (incluida en css/global.css):
+//   @import url('https://fonts.googleapis.com/css2?
+//     family=Outfit:wght@300;400;500;600;700&
+//     family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&
+//     display=swap');
+//
+// Para uso OFFLINE, descarga los archivos .woff2 desde:
+//   https://google-webfonts-helper.herokuapp.com/
+// y colócalos aquí con sus @font-face en un archivo fonts.css local.
+// ================================================================

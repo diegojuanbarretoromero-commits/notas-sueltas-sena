@@ -1,0 +1,287 @@
+/* -------------------------------------------------
+   RESET + TIPOGRAFÍA
+   ------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: 'Inter', 'Cinzel', 'Instrument Serif', sans-serif;
+  scroll-behavior: smooth;
+  background: #0a0a0a;               /* fondo oscuro premium */
+  color: #e0e0e0;
+}
+
+/* -------------------------------------------------
+   VARIABLES DE COLOR (MODIFICAR FÁCILMENTE)
+   ------------------------------------------------- */
+:root {
+  --primary: hsl(220, 80%, 60%);
+  --secondary: hsl(30, 75%, 55%);
+  --accent: hsl(170, 70%, 55%);
+  --bg-glass: rgba(255,255,255,0.06);
+  --radius: 12px;
+}
+
+/* -------------------------------------------------
+   NAVBAR (glass‑morphism)
+   ------------------------------------------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.nav-links a {
+  margin: 0 .8rem;
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 500;
+  position: relative;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--primary);
+}
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+}
+
+/* -------------------------------------------------
+   USER PROFILE
+   ------------------------------------------------- */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9rem;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* -------------------------------------------------
+   MAIN 404 CONTAINER (centrado y animado)
+   ------------------------------------------------- */
+.error-container {
+  position: relative;
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
+}
+.error-code {
+  font-family: 'Cinzel', serif;
+  font-size: 9rem;
+  line-height: 1;
+  color: var(--primary);
+  animation: pulse 3s infinite;
+}
+@keyframes pulse {
+  0%   { opacity: .7; transform: scale(1); }
+  50%  { opacity: 1;   transform: scale(1.08); }
+  100% { opacity: .7; transform: scale(1); }
+}
+.error-title {
+  font-size: 2rem;
+  margin: .8rem 0;
+  color: #fff;
+}
+.error-description {
+  margin: .8rem 0 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* -------------------------------------------------
+   BOTONES DE ACCIÓN
+   ------------------------------------------------- */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .8rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .2s, background .2s;
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-secondary {
+  background: var(--secondary);
+  color: #fff;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* -------------------------------------------------
+   SUGERENCIA BOX
+   ------------------------------------------------- */
+.suggestion-box {
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  padding: 1.4rem;
+  border-radius: var(--radius);
+  margin-top: 2rem;
+}
+.suggestion-box h3 {
+  margin-bottom: .6rem;
+  color: var(--accent);
+}
+
+/* -------------------------------------------------
+   PLAYER BAR (sticky footer)
+   ------------------------------------------------- */
+.player-bar {
+  position: fixed;
+  inset: auto 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .6rem 1.2rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.player-left,
+.player-center,
+.player-right {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.player-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #ddd;
+}
+.play-btn {
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+.track-info {
+  font-size: .9rem;
+}
+.track-title {
+  font-weight: 600;
+  color: #fff;
+}
+.track-artist {
+  opacity: .7;
+}
+.progress-bar {
+  width: 180px;
+  height: 4px;
+  background: rgba(255,255,255,.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-fill {
+  width: 35%;               /* simula progreso */
+  height: 100%;
+  background: var(--primary);
+  transition: width .3s;
+}
+.time {
+  font-size: .8rem;
+  width: 40px;
+  text-align: center;
+}
+
+/* EQ & VOLUME */
+.equalizer {
+  display: flex;
+  gap: .2rem;
+}
+.equalizer .bar {
+  width: 3px;
+  background: var(--accent);
+  animation: bounce 1s infinite;
+}
+.equalizer .bar:nth-child(1){ height:12px; animation-delay:.1s; }
+.equalizer .bar:nth-child(2){ height:18px; animation-delay:.2s; }
+.equalizer .bar:nth-child(3){ height:8px;  animation-delay:.3s; }
+.equalizer .bar:nth-child(4){ height:15px; animation-delay:.4s; }
+@keyframes bounce {
+  0%,100% { transform: scaleY(0.5); }
+  50%      { transform: scaleY(1); }
+}
+.volume-icon { font-size: 1.2rem; }
+.volume-slider {
+  width: 80px;
+  height: 4px;
+  background: rgba(255,255,255,.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.volume-fill {
+  width: 70%;
+  height: 100%;
+  background: var(--primary);
+}
+
+/* -------------------------------------------------
+   CIRCULOS DE DECO (posición absoluta)
+   ------------------------------------------------- */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--primary), transparent 70%);
+  opacity: .12;
+  pointer-events: none;
+}
+.circle-left {
+  width: 260px;
+  height: 260px;
+  top: -80px;
+  left: -120px;
+}
+.circle-right {
+  width: 200px;
+  height: 200px;
+  bottom: -90px;
+  right: -80px;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------- */
+@media (max-width: 768px) {
+  .error-code { font-size: 6rem; }
+  .button-group { flex-direction: column; }
+  .player-bar { flex-direction: column; gap: .6rem; }
+  .progress-bar { width: 100%; }
+}

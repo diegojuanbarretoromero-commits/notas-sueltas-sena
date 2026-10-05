@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas Sueltas - Mi Biblioteca</title>
+  <meta name="description" content="Tu perfil personal, colecciones de videoclips guardados e historial de lectura.">
+  <!-- Estilos globales compartidos (variables, navbar, player, etc.) -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Estilos exclusivos de la página Mi Biblioteca -->
+  <link rel="stylesheet" href="css/biblioteca.css">
+</head>
+<body>
+
+  <!-- Floating Camera Lens Decorations -->
+  <div class="lens-deco lens-deco-left-top">
+    <svg viewBox="0 0 200 200" width="100%" height="100%">
+      <circle cx="100" cy="100" r="80" fill="#1C2025" stroke="#C5A880" stroke-width="4" />
+      <circle cx="100" cy="100" r="60" fill="#121518" stroke="#3A404A" stroke-width="8" />
+      <circle cx="100" cy="100" r="40" fill="#0D1013" />
+      <circle cx="90" cy="90" r="15" fill="rgba(255,255,255,0.15)" />
+    </svg>
+  </div>
+  <div class="lens-deco lens-deco-right-bottom">
+    <svg viewBox="0 0 200 200" width="100%" height="100%">
+      <circle cx="100" cy="100" r="80" fill="#1C2025" stroke="#C5A880" stroke-width="4" />
+      <circle cx="100" cy="100" r="60" fill="#121518" stroke="#3A404A" stroke-width="8" />
+      <circle cx="100" cy="100" r="35" fill="#0D1013" />
+      <circle cx="92" cy="92" r="10" fill="rgba(255,255,255,0.15)" />
+    </svg>
+  </div>
+
+  <div class="page-outer-container">
+    
+    <!-- Header / Navbar -->
+    <header>
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
+          Notas Sueltas
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="explorar.html">Explorar</a></li>
+            <li><a href="historias.html">Historias</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li class="active"><a href="biblioteca.html">Mi Biblioteca</a></li>
+          </ul>
+        </nav>
+        <a href="biblioteca.html" class="user-profile">
+          <span>Usuario: Ana</span>
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Ana" class="user-avatar">
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      
+      <!-- Profile Card Banner -->
+      <div class="profile-banner">
+        <div class="profile-gold-top"></div>
+        <div class="profile-main">
+          
+          <div class="profile-avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Ana" class="profile-avatar">
+            <button class="profile-avatar-edit" aria-label="Editar foto">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="profile-stats-row">
+            <div class="profile-stat-box">
+              <span class="profile-stat-val">145</span>
+              <span class="profile-stat-label">Historias Leídas</span>
+            </div>
+            <div class="profile-stat-box">
+              <span class="profile-stat-val">52</span>
+              <span class="profile-stat-label">Posts Comunidad</span>
+            </div>
+            <div class="profile-stat-box">
+              <span class="profile-stat-val">7</span>
+              <span class="profile-stat-label">Logros Desbl.</span>
+            </div>
+            <div class="profile-stat-box">
+              <span class="profile-stat-val">210</span>
+              <span class="profile-stat-label">Seguidores</span>
+            </div>
+          </div>
+
+          <h2 class="profile-name">Lincicia: Ana</h2>
+          <div class="profile-handle">@licianna</div>
+          <p class="profile-bio">Exploradora de crónicas visuales y coleccionista de relatos que cambiaron la música. #VisualStorytelling #IconicVideos</p>
+        </div>
+      </div>
+
+      <!-- Main Layout: 3 Columns Grid -->
+      <div class="grid-3col">
+        
+        <!-- Left: Mis Influencias (SVG Network) -->
+        <div class="panel">
+          <h2 class="network-title" style="color: var(--accent-teal);">MIS INFLUENCIAS</h2>
+          <p class="section-subtitle" style="font-size: 0.6rem; margin-bottom: 12px;">Mapa de géneros y directores que inspiran tus gustos.</p>
+          
+          <div class="svg-network-container" style="height: 380px;">
+            <svg class="svg-network" id="bib-network-influencias" viewBox="0 0 200 250">
+              <!-- Lines -->
+              <line x1="100" y1="125" x2="60" y2="70" class="svg-link" data-source="influ-center" data-target="influ-rock"/>
+              <line x1="100" y1="125" x2="140" y2="70" class="svg-link" data-source="influ-center" data-target="influ-pop"/>
+              <line x1="100" y1="125" x2="150" y2="125" class="svg-link" data-source="influ-center" data-target="influ-jazz"/>
+              <line x1="100" y1="125" x2="120" y2="185" class="svg-link" data-source="influ-center" data-target="influ-reggae"/>
+              <line x1="100" y1="125" x2="50" y2="180" class="svg-link" data-source="influ-center" data-target="influ-electro"/>
+              
+              <!-- Center -->
+              <g class="svg-node" data-id="influ-center">
+                <circle cx="100" cy="125" r="22" fill="rgba(197, 168, 128, 0.15)" stroke="var(--accent-gold)" stroke-width="1.5"/>
+                <text x="100" y="128" text-anchor="middle" fill="var(--text-primary)" font-size="7">RED INFLUENCIAS</text>
+              </g>
+              <!-- Nodes -->
+              <g class="svg-node" data-id="influ-rock">
+                <circle cx="60" cy="70" r="14" fill="#FBF3F3" stroke="#F3D7D7" stroke-width="1"/>
+                <text x="60" y="73" text-anchor="middle" fill="#A84C4C" font-size="7">ROCK</text>
+              </g>
+              <g class="svg-node" data-id="influ-pop">
+                <circle cx="140" cy="70" r="14" fill="#FAF0EB" stroke="#F1D8CB" stroke-width="1"/>
+                <text x="140" y="73" text-anchor="middle" fill="#C56A3E" font-size="7">POP</text>
+              </g>
+              <g class="svg-node" data-id="influ-jazz">
+                <circle cx="150" cy="125" r="13" fill="#FAF9EB" stroke="#F1EFCB" stroke-width="1"/>
+                <text x="150" y="128" text-anchor="middle" fill="#938B48" font-size="7">JAZZ</text>
+              </g>
+              <g class="svg-node" data-id="influ-reggae">
+                <circle cx="120" cy="185" r="15" fill="#EEF3F0" stroke="#D3E6DA" stroke-width="1"/>
+                <text x="120" y="188" text-anchor="middle" fill="#489360" font-size="6.5">REGGAE</text>
+              </g>
+              <g class="svg-node" data-id="influ-electro">
+                <circle cx="50" cy="180" r="14" fill="#F3EEF5" stroke="#DFD3E6" stroke-width="1"/>
+                <text x="50" y="183" text-anchor="middle" fill="#784893" font-size="7">ELECTRO</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Middle: Cronología de actividad reciente -->
+        <div class="panel">
+          <h2 class="network-title" style="color: var(--accent-gold);">CRONOLOGÍA DE ACTIVIDAD RECIENTE</h2>
+          <div class="activity-timeline">
+            <!-- Item 1 -->
+            <div class="activity-item">
+              <div class="activity-time">Hace 1h</div>
+              <div class="activity-text">Comentó en Historia "Thriller"</div>
+              <div class="activity-subcard">
+                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=100&auto=format&fit=crop&q=80" class="activity-subcard-img" alt="Thriller">
+                <div class="activity-subcard-details">
+                  <div class="activity-subcard-title">Análisis de Producción</div>
+                  <div class="activity-subcard-desc">MJ / zombie. Estética oscura e impacto del maquillaje cinematográfico.</div>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="activity-item">
+              <div class="activity-time">Hace 4h</div>
+              <div class="activity-text">Guardó "La Explosión Alternativa"</div>
+              <div class="activity-subcard">
+                <img src="https://images.unsplash.com/photo-1524567214243-982894458528?w=100&auto=format&fit=crop&q=80" class="activity-subcard-img" alt="Nirvana">
+                <div class="activity-subcard-details">
+                  <div class="activity-subcard-title">Smells Like Teen Spirit</div>
+                  <div class="activity-subcard-desc">Grunge. No solo fue un himno musical, cambió la estética de MTV para siempre.</div>
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="activity-item">
+              <div class="activity-time">Hace 1d</div>
+              <div class="activity-text">La Época de Michel Gondry: Poesía Visual</div>
+              <div class="activity-subcard">
+                <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=100&auto=format&fit=crop&q=80" class="activity-subcard-img" alt="Radiohead">
+                <div class="activity-subcard-details">
+                  <div class="activity-subcard-title">Radiohead / Karma Police</div>
+                  <div class="activity-subcard-desc">Efectos de cámara analógicos y simbolismo existencialista en carretera.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Cronología de Relatos, Logros, Colecciones -->
+        <div class="forum-list">
+          
+          <!-- Achievements Progress -->
+          <div class="panel">
+            <h2 class="network-title">LOGROS Y COLECCIONES DESTACADAS</h2>
+            <div class="logros-list">
+              <!-- Item 1 -->
+              <div class="logro-item">
+                <div class="logro-header">
+                  <span class="logro-title">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--accent-gold)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                    Cronista Iniciada
+                  </span>
+                  <span>70%</span>
+                </div>
+                <div class="logro-bar-container">
+                  <div class="logro-bar-fill" data-progress="70%"></div>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="logro-item">
+                <div class="logro-header">
+                  <span class="logro-title">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--accent-gold)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    Curadora Visual
+                  </span>
+                  <span>45%</span>
+                </div>
+                <div class="logro-bar-container">
+                  <div class="logro-bar-fill" data-progress="45%"></div>
+                </div>
+              </div>
+              <!-- Item 3 -->
+              <div class="logro-item">
+                <div class="logro-header">
+                  <span class="logro-title">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--accent-gold)"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    Comunidad Activa
+                  </span>
+                  <span>85%</span>
+                </div>
+                <div class="logro-bar-container">
+                  <div class="logro-bar-fill" data-progress="85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Collections -->
+          <div class="panel">
+            <h2 class="network-title">COLECCIONES DESTACADAS</h2>
+            <div class="grid-2col" style="gap: 12px;">
+              <div class="video-card" style="height: 100px;">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&auto=format&fit=crop&q=80" alt="Favoritos">
+                <div class="video-overlay">
+                  <div class="video-card-title" style="font-size:0.7rem;">Favoritos de Lincicia</div>
+                </div>
+              </div>
+              <div class="video-card" style="height: 100px;">
+                <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=200&auto=format&fit=crop&q=80" alt="Impacto">
+                <div class="video-overlay">
+                  <div class="video-card-title" style="font-size:0.7rem;">Historias de Impacto</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Perfil de Géneros Tags (Bottom Row) -->
+      <div class="panel" style="margin-top: 12px;">
+        <h2 class="network-title">PERFIL DE GÉNEROS</h2>
+        <div class="genre-tags-list">
+          <div class="genre-tag">🎸 Rock</div>
+          <div class="genre-tag">🎷 Jazz</div>
+          <div class="genre-tag">🎹 SIZ</div>
+          <div class="genre-tag">🎙️ Rock & Pop</div>
+          <div class="genre-tag">🎧 Monio</div>
+          <div class="genre-tag">🔥 Reggaetón Gtea</div>
+          <div class="genre-tag">🌟 Bositlos</div>
+        </div>
+      </div>
+
+      <!-- Live Stream Hub (Community) -->
+      <div class="live-hub-panel">
+        <div class="live-hub-header">
+          <h2 class="carousel-title" style="color: var(--text-light);">Comunidad Live</h2>
+          <span class="live-badge">Live Now</span>
+        </div>
+        <div class="live-grid">
+          <div class="live-stream-card">
+            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=400&auto=format&fit=crop&q=80" alt="Live Event">
+            <div class="live-stream-overlay">
+              <div class="live-stream-title">LIVE STREAM HUB</div>
+              <div class="video-card-desc" style="color:#FAF7F2">LIVE: Mesa Redonda sobre el Futuro del Video Music</div>
+            </div>
+          </div>
+          <div class="live-bubbles-list">
+            <div class="live-bubble-item">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80" class="live-bubble-avatar" alt="Avatar">
+              <div class="live-bubble-content">
+                <div class="live-bubble-name">@artista_XYZ</div>
+                <div class="live-bubble-text">¿La música de Queen fue grabada en 2" o 1"?</div>
+              </div>
+            </div>
+            <div class="live-bubble-item">
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&auto=format&fit=crop&q=80" class="live-bubble-avatar" alt="Avatar">
+              <div class="live-bubble-content">
+                <div class="live-bubble-name">@orusta_XYZ</div>
+                <div class="live-bubble-text">David Fincher empezó aquí. Qué genio.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-logo">Notas Sueltas</div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Notas Sueltas.</div>
+      </div>
+    </footer>
+
+    <!-- Persistent Floating Audio Player -->
+    <div class="audio-player-bar">
+      <div class="player-inner">
+        <div class="player-controls">
+          <button class="player-btn player-btn-prev" aria-label="Anterior">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6L18 18V6z"/></svg>
+          </button>
+          <button class="player-btn player-btn-play" aria-label="Reproducir/Pausar">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button class="player-btn player-btn-next" aria-label="Siguiente">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6z"/></svg>
+          </button>
+        </div>
+        <div class="player-track-info">
+          <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=100&auto=format&fit=crop&q=80" alt="Miniatura" class="player-track-thumb">
+          <div class="player-track-meta">
+            <div class="player-track-title">Thriller</div>
+            <div class="player-track-artist">Michael Jackson</div>
+          </div>
+        </div>
+        <div class="player-progress-area">
+          <span class="player-time player-time-current">0:00</span>
+          <div class="player-slider-container">
+            <div class="player-slider-fill"></div>
+            <div class="player-slider-knob"></div>
+          </div>
+          <span class="player-time player-time-duration">13:42</span>
+        </div>
+        <div class="player-visualizer-container">
+          <div class="visualizer-bar" style="height: 4px;"></div>
+          <div class="visualizer-bar" style="height: 6px;"></div>
+          <div class="visualizer-bar" style="height: 14px;"></div>
+          <div class="visualizer-bar" style="height: 24px;"></div>
+          <div class="visualizer-bar" style="height: 18px;"></div>
+          <div class="visualizer-bar" style="height: 10px;"></div>
+          <div class="visualizer-bar" style="height: 5px;"></div>
+          <div class="visualizer-bar" style="height: 3px;"></div>
+        </div>
+        <div class="player-volume-area">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+          </svg>
+          <div class="player-volume-slider">
+            <div class="player-volume-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Reproductor de audio persistente (compartido en todas las páginas) -->
+  <script src="js/player.js"></script>
+  <!-- Red de influencias SVG -->
+  <script src="js/svg-network.js"></script>
+  <!-- Lógica exclusiva de Mi Biblioteca (barras de progreso de logros) -->
+  <script src="js/biblioteca.js"></script>
+</body>
+</html>

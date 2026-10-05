@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas Sueltas - Inicio</title>
+  <meta name="description" content="Tu viaje visual a través de los vídeos musicales que cambiaron la historia.">
+  <!-- Estilos globales compartidos (variables, navbar, player, etc.) -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Estilos exclusivos de la página Inicio -->
+  <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+
+  <!-- Floating Camera Lens Decorations (Parallax/Style Overlay) -->
+  <div class="lens-deco lens-deco-left-top">
+    <svg viewBox="0 0 200 200" width="100%" height="100%">
+      <circle cx="100" cy="100" r="80" fill="#1C2025" stroke="#C5A880" stroke-width="4" />
+      <circle cx="100" cy="100" r="60" fill="#121518" stroke="#3A404A" stroke-width="8" />
+      <circle cx="100" cy="100" r="40" fill="#0D1013" />
+      <circle cx="90" cy="90" r="15" fill="rgba(255,255,255,0.15)" />
+      <path d="M 60,100 A 40,40 0 0,1 140,100" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="6" />
+    </svg>
+  </div>
+  <div class="lens-deco lens-deco-right-bottom">
+    <svg viewBox="0 0 200 200" width="100%" height="100%">
+      <circle cx="100" cy="100" r="80" fill="#1C2025" stroke="#C5A880" stroke-width="4" />
+      <circle cx="100" cy="100" r="60" fill="#121518" stroke="#3A404A" stroke-width="8" />
+      <circle cx="100" cy="100" r="35" fill="#0D1013" />
+      <circle cx="92" cy="92" r="10" fill="rgba(255,255,255,0.15)" />
+    </svg>
+  </div>
+
+  <div class="page-outer-container">
+    
+    <!-- Header / Navbar -->
+    <header>
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
+          Notas Sueltas
+        </a>
+        <nav>
+          <ul>
+            <li class="active"><a href="index.html">Inicio</a></li>
+            <li><a href="explorar.html">Explorar</a></li>
+            <li><a href="historias.html">Historias</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="biblioteca.html">Mi Biblioteca</a></li>
+          </ul>
+        </nav>
+        <a href="biblioteca.html" class="user-profile">
+          <span>Usuario: Ana</span>
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Ana" class="user-avatar">
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Area -->
+    <section class="hero-section">
+      <div class="hero-subtitle">Hero Area</div>
+      <h1 class="hero-title">TU VIAJE VISUAL: VÍDEOS QUE CAMBIARON LA HISTORIA</h1>
+      <p class="hero-desc">Sumérgete en el impacto visual y descubre cómo los vídeos cambiaron la narrativa y redefinieron la cultura pop para siempre.</p>
+      
+      <!-- Filmstrip decorative graphic inside Hero -->
+      <div class="hero-graphic-wrap">
+        <svg class="hero-filmstrip-svg" viewBox="0 0 400 200" fill="none">
+          <!-- Film Roll Base -->
+          <path d="M20 180 C 100 160, 200 190, 380 140" stroke="#C5A880" stroke-width="4" stroke-dasharray="10 6" opacity="0.6"/>
+          <path d="M20 120 C 100 100, 200 130, 380 80" stroke="#C5A880" stroke-width="4" stroke-dasharray="10 6" opacity="0.6"/>
+          
+          <!-- Curved Film strip frames -->
+          <path d="M 40,110 L 80,105 L 80,165 L 40,170 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+          <path d="M 100,113 L 140,115 L 140,175 L 100,173 Z" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+          <path d="M 160,118 L 210,123 L 210,183 L 160,178 Z" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+          <path d="M 230,115 L 290,105 L 290,165 L 230,175 Z" fill="rgba(197, 168, 128, 0.15)" stroke="var(--accent-gold)" stroke-width="2"/>
+          <path d="M 310,95 L 360,80 L 360,140 L 310,155 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+
+          <!-- Camera Lens Graphic in 3D -->
+          <circle cx="300" cy="70" r="45" fill="#1C2025" stroke="#C5A880" stroke-width="3" />
+          <circle cx="300" cy="70" r="32" fill="#121518" stroke="#3A404A" stroke-width="5" />
+          <circle cx="300" cy="70" r="18" fill="#0D1013" />
+          <circle cx="292" cy="62" r="8" fill="rgba(255,255,255,0.25)" />
+        </svg>
+      </div>
+    </section>
+
+    <div class="main-content">
+      
+      <!-- Video Stories Carousel -->
+      <div class="carousel-container">
+        <div class="carousel-title-row">
+          <h2 class="carousel-title">Historias en Video</h2>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow" onclick="document.getElementById('track1').scrollBy({left: -200, behavior: 'smooth'})">❮</button>
+            <button class="carousel-arrow" onclick="document.getElementById('track1').scrollBy({left: 200, behavior: 'smooth'})">❯</button>
+          </div>
+        </div>
+        <div class="carousel-track" id="track1">
+          <!-- Card 1 -->
+          <div class="video-card" data-track-index="4">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=350&auto=format&fit=crop&q=80" alt="La Flaute de Millo">
+            <div class="video-overlay">
+              <div class="video-card-title">La Flaute de Millo Moderna</div>
+              <div class="video-card-desc">Queen / Éxito Sinfónico</div>
+            </div>
+            <div class="video-play-btn">
+              <svg width="10" height="10" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="video-card" data-track-index="5">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=350&auto=format&fit=crop&q=80" alt="Bajos Patentes">
+            <div class="video-overlay">
+              <div class="video-card-title">Bajos Patentes</div>
+              <div class="video-card-desc">Missy Elliott / Beat Urbano</div>
+            </div>
+            <div class="video-play-btn">
+              <svg width="10" height="10" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="video-card" data-track-index="6">
+            <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=350&auto=format&fit=crop&q=80" alt="De Palenque al Mundo">
+            <div class="video-overlay">
+              <div class="video-card-title">De Palenque al Mundo</div>
+              <div class="video-card-desc">Radiohead / Melancolía visual</div>
+            </div>
+            <div class="video-play-btn">
+              <svg width="10" height="10" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hitos Visuales: El Origen de la Narrativa -->
+      <div class="panel">
+        <h2 class="section-title">Hitos Visuales: El Origen de la Narrativa</h2>
+        <div class="grid-3col">
+          <!-- Card 1 -->
+          <div class="video-card" style="height: 160px;" data-track-index="4">
+            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&auto=format&fit=crop&q=80" alt="Queen">
+            <div class="video-overlay">
+              <div class="video-card-title">La Revolución de Queen</div>
+              <div class="video-card-desc">Focus de la creación "Bohemian Rhapsody"</div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="video-card" style="height: 160px;" data-track-index="0">
+            <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=400&auto=format&fit=crop&q=80" alt="Thriller">
+            <div class="video-overlay">
+              <div class="video-card-title">El Fenómeno "Thriller"</div>
+              <div class="video-card-desc">Behind-the-scenes of the long-form video</div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="video-card" style="height: 160px;" data-track-index="3">
+            <img src="https://images.unsplash.com/photo-1524567214243-982894458528?w=400&auto=format&fit=crop&q=80" alt="Grunge">
+            <div class="video-overlay">
+              <div class="video-card-title">La Edad de Oro de los 90s</div>
+              <div class="video-card-desc">Smells Like Teen Spirit: Innovación narrativa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Layout: Playlist + Networks -->
+      <div class="grid-home-bottom">
+        
+        <!-- Playlist Col -->
+        <div class="panel">
+          <div class="playlist-header-row">
+            <div>
+              <div class="section-subtitle">Sobre esta mezcla</div>
+              <h2 class="section-title" style="margin-bottom: 0;">VÍDEOS MUSICALES ICÓNICOS:<br>PLAYLIST DE IMPACTO</h2>
+            </div>
+            <button class="btn-playall" onclick="playTrack(0)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              Play All
+            </button>
+          </div>
+
+          <div class="playlist-list">
+            <!-- Playlist Item 1 -->
+            <div class="playlist-item" data-track-index="0">
+              <div class="playlist-num">1</div>
+              <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=80&auto=format&fit=crop&q=80" class="playlist-img" alt="Thriller">
+              <div class="playlist-details">
+                <div class="playlist-title">Michael Jackson "Thriller"</div>
+                <div class="playlist-desc">Impacto: Creó el vídeo narrativo como arte cinematográfico.</div>
+              </div>
+              <div class="playlist-play">
+                <svg width="10" height="10" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <!-- Playlist Item 2 -->
+            <div class="playlist-item" data-track-index="1">
+              <div class="playlist-num">2</div>
+              <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=80&auto=format&fit=crop&q=80" class="playlist-img" alt="Werewolf">
+              <div class="playlist-details">
+                <div class="playlist-title">Michael Jackson "Werewolf"</div>
+                <div class="playlist-desc">Especial: Unboxing de la transformación visual de época.</div>
+              </div>
+              <div class="playlist-play">
+                <svg width="10" height="10" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <!-- Playlist Item 3 -->
+            <div class="playlist-item" data-track-index="2">
+              <div class="playlist-num">3</div>
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=80&auto=format&fit=crop&q=80" class="playlist-img" alt="Madonna">
+              <div class="playlist-details">
+                <div class="playlist-title">Madonna "Like a Virgin"</div>
+                <div class="playlist-desc">Impacto: Desafió las normas y definió la estética de la MTV.</div>
+              </div>
+              <div class="playlist-play">
+                <svg width="10" height="10" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <!-- Playlist Item 4 -->
+            <div class="playlist-item" data-track-index="3">
+              <div class="playlist-num">4</div>
+              <img src="https://images.unsplash.com/photo-1524567214243-982894458528?w=80&auto=format&fit=crop&q=80" class="playlist-img" alt="Nirvana">
+              <div class="playlist-details">
+                <div class="playlist-title">Nirvana "Smells Like Teen Spirit"</div>
+                <div class="playlist-desc">Impacto: Canalizó la rebelión del grunge en un caos visual.</div>
+              </div>
+              <div class="playlist-play">
+                <svg width="10" height="10" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SVG Interactive Networks Col -->
+        <div>
+          <!-- Network 1: Artists -->
+          <div class="panel">
+            <div class="network-title">Recomendaciones: Artistas</div>
+            <div class="svg-network-container">
+              <svg class="svg-network" id="home-network-artists" viewBox="0 0 200 200">
+                <!-- Lines -->
+                <line x1="100" y1="100" x2="60" y2="60" class="svg-link" data-source="artists-center" data-target="artists-rusico"/>
+                <line x1="100" y1="100" x2="140" y2="60" class="svg-link" data-source="artists-center" data-target="artists-sonte"/>
+                <line x1="100" y1="100" x2="160" y2="100" class="svg-link" data-source="artists-center" data-target="artists-corlerstih"/>
+                <line x1="100" y1="100" x2="140" y2="140" class="svg-link" data-source="artists-center" data-target="artists-niglo"/>
+                <line x1="100" y1="100" x2="100" y2="160" class="svg-link" data-source="artists-center" data-target="artists-cino"/>
+                <line x1="100" y1="100" x2="60" y2="140" class="svg-link" data-source="artists-center" data-target="artists-mentra"/>
+                <line x1="100" y1="100" x2="40" y2="100" class="svg-link" data-source="artists-center" data-target="artists-cecleveve"/>
+                
+                <!-- Nodes -->
+                <!-- Center -->
+                <g class="svg-node" data-id="artists-center">
+                  <circle cx="100" cy="100" r="24" fill="rgba(197, 168, 128, 0.2)" stroke="var(--accent-gold)" stroke-width="1.5"/>
+                  <text x="100" y="103" text-anchor="middle" fill="var(--text-primary)" font-size="8">Artists</text>
+                </g>
+                <!-- Outer nodes -->
+                <g class="svg-node" data-id="artists-rusico">
+                  <circle cx="60" cy="60" r="14" fill="#E6EEF0" stroke="#BDD5D8" stroke-width="1"/>
+                  <text x="60" y="63" text-anchor="middle" fill="#1E5E6E" font-size="7">Rusico</text>
+                </g>
+                <g class="svg-node" data-id="artists-sonte">
+                  <circle cx="140" cy="60" r="15" fill="#FAF0EB" stroke="#F1D8CB" stroke-width="1"/>
+                  <text x="140" y="63" text-anchor="middle" fill="#C56A3E" font-size="6.5">Sonte Sonte</text>
+                </g>
+                <g class="svg-node" data-id="artists-corlerstih">
+                  <circle cx="160" cy="100" r="16" fill="#F3EEF5" stroke="#DFD3E6" stroke-width="1"/>
+                  <text x="160" y="103" text-anchor="middle" fill="#784893" font-size="6">Corlerstih</text>
+                </g>
+                <g class="svg-node" data-id="artists-niglo">
+                  <circle cx="140" cy="140" r="14" fill="#EEF3F0" stroke="#D3E6DA" stroke-width="1"/>
+                  <text x="140" y="143" text-anchor="middle" fill="#489360" font-size="7">Niglo</text>
+                </g>
+                <g class="svg-node" data-id="artists-cino">
+                  <circle cx="100" cy="160" r="15" fill="#FAF9EB" stroke="#F1EFCB" stroke-width="1"/>
+                  <text x="100" y="163" text-anchor="middle" fill="#938B48" font-size="6.5">Cino Runitto</text>
+                </g>
+                <g class="svg-node" data-id="artists-mentra">
+                  <circle cx="60" cy="140" r="14" fill="#FBF3F3" stroke="#F3D7D7" stroke-width="1"/>
+                  <text x="60" y="143" text-anchor="middle" fill="#A84C4C" font-size="7">Mentra</text>
+                </g>
+                <g class="svg-node" data-id="artists-cecleveve">
+                  <circle cx="40" cy="100" r="17" fill="#F0F4FA" stroke="#D3E0F3" stroke-width="1"/>
+                  <text x="40" y="103" text-anchor="middle" fill="#3E6CB8" font-size="6">Cecleveve</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Network 2: Directors -->
+          <div class="panel">
+            <div class="network-title">Red de Directores y Visionarios</div>
+            <div class="svg-network-container">
+              <svg class="svg-network" id="home-network-directors" viewBox="0 0 200 200">
+                <!-- Lines -->
+                <line x1="100" y1="100" x2="65" y2="55" class="svg-link" data-source="dir-center" data-target="dir-jonze"/>
+                <line x1="100" y1="100" x2="135" y2="55" class="svg-link" data-source="dir-center" data-target="dir-fincher"/>
+                <line x1="100" y1="100" x2="160" y2="105" class="svg-link" data-source="dir-center" data-target="dir-williams"/>
+                <line x1="100" y1="100" x2="120" y2="155" class="svg-link" data-source="dir-center" data-target="dir-gondry"/>
+                <line x1="100" y1="100" x2="55" y2="135" class="svg-link" data-source="dir-center" data-target="dir-jackson"/>
+                
+                <!-- Nodes -->
+                <g class="svg-node" data-id="dir-center">
+                  <circle cx="100" cy="100" r="22" fill="rgba(30, 94, 110, 0.15)" stroke="var(--accent-teal)" stroke-width="1.5"/>
+                  <text x="100" y="103" text-anchor="middle" fill="var(--text-primary)" font-size="8">Directores</text>
+                </g>
+                <g class="svg-node" data-id="dir-jonze">
+                  <circle cx="65" cy="55" r="14" fill="#FAF9EB" stroke="#F1EFCB" stroke-width="1"/>
+                  <text x="65" y="58" text-anchor="middle" fill="#938B48" font-size="6">Spike Jonze</text>
+                </g>
+                <g class="svg-node" data-id="dir-fincher">
+                  <circle cx="135" cy="55" r="15" fill="#E6EEF0" stroke="#BDD5D8" stroke-width="1"/>
+                  <text x="135" y="58" text-anchor="middle" fill="#1E5E6E" font-size="5.5">David Fincher</text>
+                </g>
+                <g class="svg-node" data-id="dir-williams">
+                  <circle cx="160" cy="105" r="16" fill="#FDF3FB" stroke="#F7D3EF" stroke-width="1"/>
+                  <text x="160" y="108" text-anchor="middle" fill="#AB4994" font-size="5.5">Hype Williams</text>
+                </g>
+                <g class="svg-node" data-id="dir-gondry">
+                  <circle cx="120" cy="155" r="15" fill="#FBF3F3" stroke="#F3D7D7" stroke-width="1"/>
+                  <text x="120" y="158" text-anchor="middle" fill="#A84C4C" font-size="6">M. Gondry</text>
+                </g>
+                <g class="svg-node" data-id="dir-jackson">
+                  <circle cx="55" cy="135" r="15" fill="#F0F4FA" stroke="#D3E0F3" stroke-width="1"/>
+                  <text x="55" y="138" text-anchor="middle" fill="#3E6CB8" font-size="6.5">M. Jackson</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Live Stream Hub (Community) -->
+      <div class="live-hub-panel">
+        <div class="live-hub-header">
+          <h2 class="carousel-title" style="color: var(--text-light);">Comunidad</h2>
+          <span class="live-badge">Live Now</span>
+        </div>
+        <div class="live-grid">
+          <!-- Video Streaming Mock -->
+          <div class="live-stream-card">
+            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=400&auto=format&fit=crop&q=80" alt="Live Event">
+            <div class="live-stream-overlay">
+              <div class="live-stream-title">LIVE STREAM HUB</div>
+              <div class="video-card-desc" style="color:#FAF7F2">LIVE: Mesa Redonda sobre el Futuro del Video Music</div>
+            </div>
+          </div>
+          <!-- Reaction list -->
+          <div class="live-bubbles-list">
+            <!-- Bubble Item -->
+            <div class="live-bubble-item">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80" class="live-bubble-avatar" alt="Avatar">
+              <div class="live-bubble-content">
+                <div class="live-bubble-name">@artista_XYZ</div>
+                <div class="live-bubble-text">¡Vaya análisis de Thriller! Increíble.</div>
+              </div>
+            </div>
+            <!-- Bubble Item -->
+            <div class="live-bubble-item">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80" class="live-bubble-avatar" alt="Avatar">
+              <div class="live-bubble-content">
+                <div class="live-bubble-name">@partits_XYZ</div>
+                <div class="live-bubble-text">¿La música de Queen fue grabada en 2" o 1"?</div>
+              </div>
+            </div>
+            <!-- Bubble Item -->
+            <div class="live-bubble-item">
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&auto=format&fit=crop&q=80" class="live-bubble-avatar" alt="Avatar">
+              <div class="live-bubble-content">
+                <div class="live-bubble-name">@orusta_XYZ</div>
+                <div class="live-bubble-text">David Fincher empezó aquí. Qué genio.</div>
+              </div>
+            </div>
+            <!-- Bubble Item -->
+            <div class="live-bubble-item">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=80" class="live-bubble-avatar" alt="Avatar">
+              <div class="live-bubble-content">
+                <div class="live-bubble-name">@onzox2</div>
+                <div class="live-bubble-text">Amo esta biblioteca, me da tanta inspiración.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-logo">Notas Sueltas</div>
+        <div class="footer-links">
+          <div class="footer-links-col">
+            <a href="index.html">Inicio</a>
+            <a href="explorar.html">Explorar</a>
+          </div>
+          <div class="footer-links-col">
+            <a href="comunidad.html">Comunidad</a>
+            <a href="biblioteca.html">Privacidad</a>
+          </div>
+          <div class="footer-links-col">
+            <a href="mailto:info@notassueltas.com">Contacto</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Notas Sueltas. Todos los derechos reservados.</div>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.528 3.5 12 3.5 12 3.5s-7.528 0-9.388.555a3.002 3.002 0 0 0-2.11 2.108C0 8.022 0 12 0 12s0 3.978.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.472 20.5 12 20.5 12 20.5s7.528 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.978 24 12 24 12s0-3.978-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Persistent Floating Audio Player -->
+    <div class="audio-player-bar">
+      <div class="player-inner">
+        <!-- Controls -->
+        <div class="player-controls">
+          <button class="player-btn player-btn-prev" aria-label="Anterior">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 6h2v12H6zm3.5 6L18 18V6z"/>
+            </svg>
+          </button>
+          <button class="player-btn player-btn-play" aria-label="Reproducir/Pausar">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </button>
+          <button class="player-btn player-btn-next" aria-label="Siguiente">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Track info -->
+        <div class="player-track-info">
+          <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=100&auto=format&fit=crop&q=80" alt="Miniatura" class="player-track-thumb">
+          <div class="player-track-meta">
+            <div class="player-track-title">Thriller</div>
+            <div class="player-track-artist">Michael Jackson</div>
+          </div>
+        </div>
+
+        <!-- Seeker Slider -->
+        <div class="player-progress-area">
+          <span class="player-time player-time-current">0:00</span>
+          <div class="player-slider-container">
+            <div class="player-slider-fill"></div>
+            <div class="player-slider-knob"></div>
+          </div>
+          <span class="player-time player-time-duration">13:42</span>
+        </div>
+
+        <!-- Waveform Visualizer -->
+        <div class="player-visualizer-container">
+          <div class="visualizer-bar" style="height: 4px;"></div>
+          <div class="visualizer-bar" style="height: 6px;"></div>
+          <div class="visualizer-bar" style="height: 14px;"></div>
+          <div class="visualizer-bar" style="height: 24px;"></div>
+          <div class="visualizer-bar" style="height: 18px;"></div>
+          <div class="visualizer-bar" style="height: 10px;"></div>
+          <div class="visualizer-bar" style="height: 5px;"></div>
+          <div class="visualizer-bar" style="height: 3px;"></div>
+        </div>
+
+        <!-- Volume Area -->
+        <div class="player-volume-area">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+          </svg>
+          <div class="player-volume-slider">
+            <div class="player-volume-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Reproductor de audio persistente (compartido en todas las páginas) -->
+  <script src="js/player.js"></script>
+  <!-- Redes SVG interactivas (compartido con Explorar) -->
+  <script src="js/svg-network.js"></script>
+  <!-- Lógica exclusiva de la página Inicio -->
+  <script src="js/inicio.js"></script>
+</body>
+</html>

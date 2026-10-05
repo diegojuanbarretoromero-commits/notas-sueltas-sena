@@ -1,0 +1,109 @@
+/* ================================================================
+   NOTAS SUELTAS — inicio.css
+   Estilos exclusivos de la página de INICIO (index.html):
+   playlist de la página principal, carrusel de vídeos destacados
+   y el hub de transmisiones en vivo de la sección inferior.
+   ================================================================ */
+
+/* ─── CABECERA HERO DEL INICIO ───────────────────────────────────
+   Sobreescribe el tamaño del hero-title con variante grande       */
+.hero-section .hero-title {
+  font-size: 2.8rem;
+}
+
+/* ─── CARRUSEL DE VÍDEOS DESTACADOS ─────────────────────────────
+   Sección "EN TENDENCIA" del inicio                              */
+.featured-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .featured-row { grid-template-columns: 1fr; }
+}
+
+/* Tarjeta principal grande (vídeo destacado a la izquierda) */
+.featured-main-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  height: 260px;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s ease;
+}
+.featured-main-card:hover            { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.featured-main-card img              { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.featured-main-card:hover img        { transform: scale(1.05); }
+.featured-main-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 20%, rgba(18,21,24,0.9) 100%);
+  padding: 20px; display: flex; flex-direction: column; justify-content: flex-end;
+}
+.featured-main-badge {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+.featured-main-title {
+  font-family: 'Playfair Display', serif; font-size: 1.4rem;
+  font-weight: 700; color: white; margin-bottom: 8px; line-height: 1.2;
+}
+.featured-main-meta { font-size: 0.7rem; color: rgba(255,255,255,0.6); }
+
+/* Lista de vídeos secundarios (a la derecha del vídeo destacado) */
+.featured-side-list {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.featured-side-card {
+  display: flex; gap: 12px; align-items: center;
+  padding: 10px; border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.5); border: 1px solid var(--border-glass);
+  cursor: pointer; transition: all 0.3s ease;
+}
+.featured-side-card:hover { background: rgba(255,255,255,0.9); border-color: var(--accent-gold); }
+.featured-side-thumb {
+  width: 64px; height: 48px; border-radius: var(--radius-sm);
+  object-fit: cover; flex-shrink: 0;
+}
+.featured-side-info  { flex: 1; min-width: 0; }
+.featured-side-title { font-size: 0.78rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; line-height: 1.3; }
+.featured-side-meta  { font-size: 0.65rem; color: var(--text-muted); }
+.featured-side-rank  { font-size: 0.75rem; font-weight: 700; color: var(--accent-gold); flex-shrink: 0; }
+
+/* ─── SECCIÓN INFERIOR: PLAYLIST + GRÁFICO SVG ───────────────────
+   grid-home-bottom ya definido en global.css                      */
+
+/* Recuadro de estadísticas de usuario en el inicio */
+.home-stats-row {
+  display: flex; gap: 20px; margin-bottom: 20px;
+}
+.home-stat {
+  flex: 1;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 16px; text-align: center;
+}
+.home-stat-val   { font-size: 1.6rem; font-weight: 700; color: var(--accent-teal); }
+.home-stat-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-top: 4px; }
+
+/* ─── SECCIÓN DE GÉNEROS DE MÚSICA ──────────────────────────────  */
+.genre-chips-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.genre-chip {
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid var(--border-light);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.genre-chip:hover,
+.genre-chip.active {
+  background: var(--accent-gold); color: white; border-color: var(--accent-gold);
+}

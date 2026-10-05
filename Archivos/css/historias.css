@@ -1,0 +1,133 @@
+/* ================================================================
+   NOTAS SUELTAS — historias.css
+   Estilos exclusivos de la página HISTORIAS (historias.html):
+   buscador con filtros, cuadrícula de tarjetas de artículo y
+   barra de categorías superior.
+   ================================================================ */
+
+/* ─── BARRA DE BÚSQUEDA Y FILTROS ───────────────────────────────
+   Fila horizontal con input de búsqueda + selector de categoría */
+.search-filter-row {
+  display: flex; gap: 12px; margin-bottom: 24px;
+}
+
+/* Envoltorio del input con ícono de lupa */
+.search-input-wrap {
+  flex: 1; position: relative;
+}
+.search-input-wrap svg {
+  position: absolute; left: 12px; top: 50%;
+  transform: translateY(-50%); color: var(--text-muted);
+}
+.search-input {
+  width: 100%; padding: 10px 12px 10px 36px;
+  border-radius: 30px; border: 1px solid var(--border-light);
+  font-family: 'Outfit', sans-serif; font-size: 0.8rem;
+  background: white; outline: none; transition: border-color 0.3s ease;
+}
+.search-input:focus { border-color: var(--accent-gold); }
+
+/* Selector de categoría / filtro */
+.search-filter-select {
+  padding: 10px 16px; border-radius: 30px;
+  border: 1px solid var(--border-light);
+  font-family: 'Outfit', sans-serif; font-size: 0.8rem;
+  background: white; color: var(--text-primary);
+  outline: none; cursor: pointer;
+}
+
+/* ─── CHIPS DE CATEGORÍAS ────────────────────────────────────────
+   Fila de botones para filtrar por género / período             */
+.category-chips {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+}
+.category-chip {
+  padding: 5px 16px; border-radius: 30px;
+  border: 1px solid var(--border-light);
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px;
+  background: white; cursor: pointer; transition: all 0.3s ease;
+}
+.category-chip:hover,
+.category-chip.active { background: var(--accent-gold); color: white; border-color: var(--accent-gold); }
+
+/* ─── CUADRÍCULA DE TARJETAS DE HISTORIA ────────────────────────
+   Dos columnas responsivas con tarjetas de artículo             */
+.stories-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+@media (max-width: 600px) {
+  .stories-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── TARJETA DE HISTORIA ────────────────────────────────────────
+   Cada tarjeta contiene: imagen, meta, título, extracto y footer */
+.story-card {
+  background: var(--glass-white);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column;
+  transition: all 0.3s ease;
+}
+.story-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+/* Imagen de portada */
+.story-card-img { width: 100%; height: 160px; object-fit: cover; }
+
+/* Cuerpo de texto de la tarjeta */
+.story-card-body {
+  padding: 20px;
+  display: flex; flex-direction: column; flex: 1;
+}
+
+/* Metadata: género + tiempo de lectura */
+.story-card-meta {
+  display: flex; gap: 12px;
+  font-size: 0.65rem; color: var(--accent-gold);
+  font-weight: 700; text-transform: uppercase; margin-bottom: 8px;
+}
+
+/* Título de la historia */
+.story-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; color: var(--text-primary);
+  margin-bottom: 10px; font-weight: 700; line-height: 1.3;
+}
+
+/* Extracto / resumen del artículo */
+.story-card-excerpt {
+  font-size: 0.75rem; color: var(--text-muted);
+  line-height: 1.5; margin-bottom: 16px; flex: 1;
+}
+
+/* Footer de la tarjeta: autor + botón "Leer más" */
+.story-card-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid rgba(197,168,128,0.15); padding-top: 12px;
+}
+.story-card-author { display: flex; align-items: center; gap: 8px; }
+.story-card-author-img { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; }
+.story-card-author-name { font-size: 0.7rem; font-weight: 600; color: var(--text-primary); }
+
+/* Enlace "Leer más" con flecha animada */
+.story-card-readmore {
+  color: var(--accent-teal); text-decoration: none;
+  font-size: 0.75rem; font-weight: 700;
+  display: inline-flex; align-items: center; gap: 4px;
+  transition: transform 0.3s ease;
+}
+.story-card-readmore:hover { transform: translateX(4px); }
+
+/* ─── HISTORIA DESTACADA (FULL WIDTH) ───────────────────────────
+   Primera tarjeta que ocupa todo el ancho de la cuadrícula      */
+.story-card--featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+.story-card--featured .story-card-img {
+  width: 340px; height: auto; flex-shrink: 0;
+}
+@media (max-width: 680px) {
+  .story-card--featured { flex-direction: column; }
+  .story-card--featured .story-card-img { width: 100%; height: 180px; }
+}

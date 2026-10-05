@@ -1,0 +1,29 @@
+Images used in Notas Sueltas
+==============================
+
+All images in this project are loaded from Unsplash (CDN) for demonstration purposes.
+No local image files are required to run the project.
+
+Image sources used:
+  - User avatar (Ana):
+    https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80
+
+  - Thriller / Michael Jackson cover:
+    https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=150&auto=format&fit=crop&q=60
+
+  - Bohemian Rhapsody / Queen:
+    https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=150&auto=format&fit=crop&q=60
+
+  - Nirvana:
+    https://images.unsplash.com/photo-1524567214243-982894458528?w=150&auto=format&fit=crop&q=60
+
+  - Live stream backgrounds:
+    https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&auto=format&fit=crop&q=80
+
+  - Story card covers:
+    Various Unsplash concert/music photography images
+
+To replace with local images:
+  1. Download the images and place them in this /images/ folder.
+  2. Update the src attributes in each HTML file to use relative paths, e.g.:
+       src="images/thriller-cover.jpg"
